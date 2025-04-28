@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Form</h1>
+        <form action="/submit-form" method="POST">
+            <lable for="name">Name: </lable>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">submit</button>
+        </form>
+        <br>
+        <h3>Text Field</h3>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" required>
+       
+        <h3>Password Field</h3>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" required>
+
+        <h3>Email Field</h3>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required>
+
+        <h3>Checkbox</h3>
+        <label for="subscribe">Subscribe to newsletters: </label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+
+        <h3>Radio Buttons</h3>
+        <label>Choose your favorite color: </label>
+        <input type="radio" id="red" name="color" value="red">
+        <lable for="radio" id="blue" name="color" value="blue"></lable>
+        <label for="blue">Blue</label>
+        
+        <h3>Radio Buttons</h3>
+        <label for="city">Select your city: </label>
+        <select id="city" name="city">
+            <option value="nyc">New York</option>
+            <option value="Los">Los Angeles</option>
+            <option value="sf">San Francisco</option>
+        </select>
+
+        <h3>Textarea (Multi-line Text Input)</h3>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+        <h3>File Upload</h3>
+        <label for="file">Upload your resume:</label>
+        <input type="file" id="file" name="resume">
+
+
+        <h3>Button Types (Submit, Reset, and Custom)</h3>
+        <button type="submit">Submit</button>
+
+        <h3>Reset Button</h3>
+        <button type="reset">Reset</button>
+
+
+        <h3> Custom Button (Normal Button)</h3>
+        <button type="button" onclick="alert('Hello!')">Click Me</button>
+
+        <h3>Grouping Form Elements (Fieldset & Legend)</h3>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name">
+        </fieldset>
+
+        <h3>Form Validation (Required, Pattern, Min/Max)</h3>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <h3>Form Validation (Required, Pattern, Min/Max)</h3>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+
+        <h3>Pattern (Regex) Validation</h3>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" pattern="\d{3}[-]\d{3}[-]\d{4}" required>
+
+
+        <h3>Minimum and Maximum Value</h3>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+
+
+        <h3>Form Action and Method</h3>
+        <form action="submit_form.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+          
+
+        <h3> Multiple Forms on One Page</h3>
+        <form action="login.php" method="POST">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+            <button type="submit">Login</button>
+        </form>
+          
+        <form action="register.php" method="POST">
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="email" required>
+            <button type="submit">Register</button>
+        </form>
+          
+          
+        <h3>Hidden Input Fields</h3>
+        <input type="hidden" name="user_id" value="12345">
+
+
+        <h3>Styling Forms</h3>
+        <style>
+            input[type="text"], input[type="email"], input[type="password"] {
+              padding: 10px;
+              margin: 5px;
+              width: 100%;
+              border: 1px solid #ccc;
+            }
+            button {
+              padding: 10px 20px;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              cursor: pointer;
+            }
+            button:hover {
+              background-color: #45a049;
+            }
+        </style>    
+    </body>
+</html>
