@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homework</title>
+  <style>
+   body {
+    background: linear-gradient(to right, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+    margin: 0;
+    color: #e0e0e0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    h1, h2 {
+      color: #00fff7;
+    }
+
+    .container {
+    background: linear-gradient(to right, rgba(31, 0, 92, 0.85), rgba(203, 72, 92, 0.85));
+    border: 2px solid #00fff7;
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    }
+
+
+    
+    .css-units {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .box {
+      background-color: #00a86b;
+      color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 10px;
+      flex: 1 1 180px;
+      max-width: 200px;
+      box-shadow: 0 0 12px #00fff7;
+    }
+
+    .rem-px { font-size: 1.3rem; width: 20px; height: 350px; }
+    .vw-vh { font-size: 1.3rem; width: 20px; height: 180px; }
+    .percent { font-size: 1.3rem; width: 20px; height: 120px; }
+    .vmin { font-size: 1.3rem; width: 20px; height: 350px; }
+    .em { font-size: 1.3rem; width: 20px; height: 330px; }
+
+    
+    .card-container,
+    .card-container2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      margin: auto;
+      max-width: 1000px;
+    }
+
+    .card, .card2 {
+      background-color: #2a2a2a;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00fff7;
+      text-align: center;
+    }
+
+    .card img, .card2 img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3, .card2 h3 {
+      color: #00fff7;
+    }
+
+    .card p, .card2 p {
+      color: #ccc;
+    }
+
+    
+    .masking {
+      height: 500px;
+      width: 100%;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 80%);
+    }
+
+    
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .image-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      background-color: #222;
+      box-shadow: 0 0 15px #00fff7;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(100%);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 255, 247, 0.3);
+    }
+
+    .image-card:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #00fff7;
+      font-size: 1.4rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .image-card:hover .overlay-text {
+      opacity: 1;
+    }
+
+    
+    .text-container {
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .circle {
+      float: left;
+      width: 250px;
+      height: 250px;
+      background-color: crimson;
+      shape-outside: circle();
+      clip-path: circle();
+      margin: 20px 20px 20px 0;
+    }
+
+    .text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="container">
+    <h1>CSS Units Practice</h1>
+    <div class="css-units">
+      <div class="box rem-px">This box uses <br><strong>rem</strong> and <strong>px</strong></div>
+      <div class="box vw-vh">This box uses <strong>vw</strong> and <strong>vh</strong></div>
+      <div class="box percent">This box uses <strong>%</strong></div>
+      <div class="box vmin">This box uses <strong>vmin</strong></div>
+      <div class="box em">This box uses <strong>em</strong></div>
+    </div>
+  </div>
+
+  <hr>
+
+  
+  <div class="container">
+    <h1>Collecting Random Items</h1>
+    <p>Discover random Items we are Collecting today. Who knows what we might find?</p>
+    <main class="card-container">
+      <div class="card"><img src="Socks.jpeg" alt="Socks"/><h3>Socks</h3><p>The mystery of always losing one sock...</p></div>
+      <div class="card"><img src="Cup.jpg" alt="Coffee"/><h3>Coffee Cups</h3><p>Why do we always have 10 half-drunk coffee cups?</p></div>
+      <div class="card"><img src="PizzaBox.jpg" alt="Pizza"/><h3>Pizza Boxes</h3><p>The only thing better than pizza is more pizza.</p></div>
+      <div class="card"><img src="Cookies.jpg" alt="Cookies"/><h3>Cookies</h3><p>Warning: May cause sugar rush and crumbs.</p></div>
+      <div class="card"><img src="Toys.jpg" alt="Toys"/><h3>Toys</h3><p>Do these toys ever get used? Who knows.</p></div>
+      <div class="card"><img src="Plants.jpeg" alt="Plants"/><h3>Plants</h3><p>They never stop growing, just like your love for them!</p></div>
+    </main>
+  </div>
+
+  <hr>
+
+  
+  <div class="container">
+    <h1>Masonry Layout Mode!</h1>
+    <main class="card-container2">
+      <div class="card2"><img src="Laptop.jpeg" alt="Laptops"/><h3>Laptops</h3><p>How many laptops can one person have?</p></div>
+      <div class="card2"><img src="Phone.jpg" alt="Phones"/><h3>Phones</h3><p>Who knew they would outlast Friendship?</p></div>
+      <div class="card2"><img src="Toothbrushs.jpg" alt="Toothbrush"/><h3>Toothbrushes</h3><p>How many toothbrushes do you really need?</p></div>
+      <div class="card2"><img src="Books.jpg" alt="Books"/><h3>Books</h3><p>A library inside every home.</p></div>
+      <div class="card2"><img src="Shoes.jpeg" alt="Shoes"/><h3>Shoes</h3><p>Matching Shoes? Never.</p></div>
+      <div class="card2"><img src="Hat.jpg" alt="Hats"/><h3>Hats</h3><p>Just one Hat, they said. You don't need more...</p></div>
+    </main>
+  </div>
+
+  <hr>
+
+  
+  <div class="container">
+    <h1>Masking</h1>
+    <img class="masking" src="Aurora.jpeg" alt="Masking"/>
+  </div>
+
+  <hr>
+
+  
+  <h1>CSS Images and Hover Effects</h1>
+  <div class="image-gallery">
+    <div class="image-card"><img src="image1.jpg" alt="image1"/><div class="overlay-text">Zoom effect</div></div>
+    <div class="image-card"><img src="image2.jpg" alt="image2"/><div class="overlay-text">Rotate Effects</div></div>
+    <div class="image-card"><img src="image3.jpg" alt="image3"/><div class="overlay-text">Black and White</div></div>
+    <div class="image-card"><img src="image4.jpg" alt="image4"/><div class="overlay-text">Text Reveal</div></div>
+  </div>
+
+  <hr>
+
+  
+  <div class="container">
+    <h2>Shape Outside CSS Property</h2>
+    <div class="text-container">
+      <div class="circle"></div>
+      <p>
+        Balloons are pretty and come in different colors, different shapes and sizes, 
+        they can even adjust sizes as needed. But beware, don't make them too big or they 
+        might just pop. They serve a variety of purposes, from decorating to water balloon wars.
+        You just have to use your head to think a little bit about what to do with them.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
